@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+	<title>To-Do con Angular JS</title>
+	<script  src="angular.min.js"></script>
+	<style>
+         /* Creamos clase para tachar texto */
+		.ok {
+			text-decoration: line-through;
+		}
+	</style>
+</head>
+<!-- Creamos array con tareas basica -->
+<body ng-init="tareas =['Limpiar Habitacion', 'Cocinar', 'Ir al Gym', 'Pasear al Perro']">
+
+<h1>Tareas por Realizar</h1>
+<!-- Aplicamos repeat para leer array -->
+<p ng-repeat="tarea in tareas" class="{{ check }}">
+	<!-- Agregamos checkbox para marcar tareas -->
+	<input type="checkbox" ng-model="check" ng-true-value=" 'ok' " ng-false-value = " '' ">
+	{{ tarea }} {{ check }}
+</p>
+
+<!-- Agregamos nuevas tareas -->
+<input type="text" ng-model="nuevo"><br>
+<button ng-click="tareas.push(nuevo);nuevo=''">Agregar</button>
+</body>
+</html>
