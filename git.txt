@@ -1,1 +1,9 @@
-git.txt
+git config --global user.email "faoszz@gmail.com"  --> configuración de usuario
+git config --global user.name  "foxfos"  --> configuración de usuario
+git init      --> inicia git
+git add .     --> Creación inicial
+git status    --> Verifica contenido
+git commit -m "versión de clase"--> guarda versión en historial de GIT
+git remote add github https://github.com/foxfos/angular1.git  --> 
+git branch  --> verifica ramas creadas --> hoy: master
+git push github master  --> subir los archivos a repositorio
